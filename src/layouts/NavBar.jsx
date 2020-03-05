@@ -5,6 +5,7 @@ import Headroom from 'react-headroom';
 import logo from '../../static/logo/header-logo.png';
 
 const StyledLink = styled(Link)`
+  padding-top: 1em;
   display: flex;
   font-weight: 700;
   align-items: center;
@@ -16,6 +17,7 @@ const Nav = styled.nav`
   font-family: ${props => props.theme.fontFamily.body};
   font-weight: 500;
   font-size: 1.1rem;
+  padding-right: 2em;
   align-items: center;
   a {
     color: ${props => props.theme.colors.white.base};
@@ -33,9 +35,9 @@ const NavBar = () => (
       <img src={logo} alt="Gatsby Logo" />
     </StyledLink>
     <Nav>
-      <Link to="/">Home</Link>
-      <Link to="/blog">Blog</Link>
-      <Link to="/about">About</Link>
+      {/* <Link to="/">Home</Link>
+      <Link to="/blog">Blog</Link> */}
+      <Link to="/about">About Me</Link>
     </Nav>
   </Headroom>
 );

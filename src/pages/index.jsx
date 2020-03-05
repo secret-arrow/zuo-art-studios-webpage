@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
 import { Header, PostList } from 'components';
 import { Layout } from 'layouts';
+import logo from '../../static/logo/header-logo.png';
 
 const PostWrapper = styled.div`
   display: flex;
@@ -24,9 +25,20 @@ const Index = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      <Helmet title={'Home Page'} />
-      <Header title="Home Page">Gatsby Tutorial Starter</Header>
+      <Helmet title={'Zuo Art Studios'} />
+      <Header title="Zuo Art Studios">[headline]</Header>
+
+
+
+
+
+
+
       <PostWrapper>
+
+
+
+      {/*
         {edges.map(({ node }) => {
           const { id, excerpt, frontmatter } = node;
           const { cover, path, title, date } = frontmatter;
@@ -41,13 +53,47 @@ const Index = ({ data }) => {
             />
           );
         })}
+
+
+        */}
+
+        <PostList
+          cover={logo}
+          path={'/artwork'}
+          title="Artwork"
+        />
+
+        <PostList
+          cover={logo}
+          path={'/schedule'}
+          title="Class Schedule"
+        />
+
+        <PostList
+          cover={logo}
+          path={'/student'}
+          title="Student Artwork"
+        />
       </PostWrapper>
+
+
+
+
+
+
+
+
+
+
+
     </Layout>
   );
 };
 
 export default Index;
 
+
+{/*
 Index.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
@@ -68,6 +114,8 @@ Index.propTypes = {
     }),
   }),
 };
+
+*/}
 
 export const query = graphql`
   query {
