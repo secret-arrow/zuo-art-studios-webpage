@@ -14,6 +14,22 @@ module.exports = {
         path: `${__dirname}/content/posts`,
       },
     },
+    {
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        baseUrl: 'zuoartstudios.wordpress.com',
+        protocol: 'https',
+        hostingWPCOM: true,
+        useACF: false,
+        auth: {
+          wpcom_app_clientSecret: 'WcNGhgwgd3NjLq3CEJeZUI7XfXMtKyCb43jsBpapUVNw5RSzo7LQiUQ3GqAYpRu8',
+          wpcom_app_clientId: '68277',
+          wpcom_user: 'jerrytigerxu',
+          wpcom_pass: 'rabbit168Win',
+        },
+        verboseOutput: false,
+      }
+    },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',

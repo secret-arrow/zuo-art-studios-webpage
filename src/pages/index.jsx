@@ -7,6 +7,7 @@ import { Header, PostList } from 'components';
 import { Layout } from 'layouts';
 import logo from '../../static/logo/header-logo.png';
 
+
 const PostWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -21,12 +22,37 @@ const PostWrapper = styled.div`
   }
 `;
 
-const Index = ({ data }) => {
-  const { edges } = data.allMarkdownRemark;
+
+
+
+
+
+
+const Index = ( props ) => {
+  const username = props.data.allWordpressWpMe.edges[0].node.name;
+  const description = props.data.allWordpressWpMe.edges[0].node.description;
+
+
+
+
+
+
+
   return (
     <Layout>
       <Helmet title={'Zuo Art Studios'} />
       <Header title="Zuo Art Studios">[headline]</Header>
+
+      <h1>{ username }</h1>
+      <h2>{ description }</h2>
+
+
+
+
+
+
+
+
 
 
 
@@ -38,24 +64,6 @@ const Index = ({ data }) => {
 
 
 
-      {/*
-        {edges.map(({ node }) => {
-          const { id, excerpt, frontmatter } = node;
-          const { cover, path, title, date } = frontmatter;
-          return (
-            <PostList
-              key={id}
-              cover={cover.childImageSharp.fluid}
-              path={path}
-              title={title}
-              date={date}
-              excerpt={excerpt}
-            />
-          );
-        })}
-
-
-        */}
 
         <PostList
           cover={logo}
@@ -93,59 +101,21 @@ const Index = ({ data }) => {
 export default Index;
 
 
-{/*
-Index.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          node: PropTypes.shape({
-            excerpt: PropTypes.string,
-            frontmatter: PropTypes.shape({
-              cover: PropTypes.object.isRequired,
-              path: PropTypes.string.isRequired,
-              title: PropTypes.string.isRequired,
-              date: PropTypes.string.isRequired,
-              tags: PropTypes.array,
-            }),
-          }),
-        }).isRequired
-      ),
-    }),
-  }),
-};
 
-*/}
+
+
+
+
 
 export const query = graphql`
   query {
-    allMarkdownRemark(
-      limit: 6
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
+    allWordpressWpMe {
       edges {
         node {
-          id
-          excerpt(pruneLength: 75)
-          frontmatter {
-            title
-            path
-            tags
-            date(formatString: "MM.DD.YYYY")
-            cover {
-              childImageSharp {
-                fluid(
-                  maxWidth: 1000
-                  quality: 90
-                  traceSVG: { color: "#2B2B2F" }
-                ) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
-            }
-          }
+          name
+          description
         }
       }
     }
-  }
+}
 `;

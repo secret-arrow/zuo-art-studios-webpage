@@ -6,10 +6,10 @@ module.exports = {
   url: 'https://gatsby-tutorial-starter.netlify.com', // Domain of your site. No trailing slash!
   siteUrl: 'https://gatsby-tutorial-starter.netlify.com', // url + pathPrefix
   siteLanguage: 'en', // Language Tag on <html> element
-  logo: 'static/logo/logo.png', // Used for SEO
+  logo: 'static/logo/zuo_logo.png', // Used for SEO
   banner: 'static/logo/banner.png',
   // JSONLD / Manifest
-  favicon: 'static/logo/favicon.png', // Used for manifest favicon generation
+  favicon: 'static/logo/zuo_favico.png', // Used for manifest favicon generation
   shortName: 'GatsbyTut', // shortname for manifest. MUST be shorter than 12 characters
   author: 'Justin', // Author for schemaORGJSONLD
   themeColor: '#3e7bf2',
