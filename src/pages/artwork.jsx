@@ -10,6 +10,7 @@ import { Layout, Container } from 'layouts';
 
 const About = (center) => {
 
+{/*
 
   const {
       allWordpressWpMedia: { edges },
@@ -36,7 +37,7 @@ const About = (center) => {
       }
 
   `;
-
+*/}
 
 
 
@@ -72,7 +73,7 @@ About.propTypes = {
 
 
 
-
+{/*
 const allMedia = graphql`
   query {
     allWordpressWpMedia {
@@ -92,3 +93,5 @@ const allMedia = graphql`
     }
   }
 `;
+
+*/}
