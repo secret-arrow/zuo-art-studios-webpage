@@ -10,8 +10,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'posts',
-        path: `${__dirname}/content/posts`,
+        name: 'zuo_art',
+        path: `${__dirname}/Zuo Art Studio Site Pictures/Artwork`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'student',
+        path: `${__dirname}/Zuo Art Studio Site Pictures/Student Artwork`,
       },
     },
     {
