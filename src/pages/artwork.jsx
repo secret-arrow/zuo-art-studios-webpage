@@ -15,8 +15,8 @@ const About = (props) => {
 
   return (
       <Layout>
-        <Helmet title={'About Page'} />
-        <Header title="About Page">Gatsby Tutorial Starter</Header>
+        <Helmet title={'Artwork'} />
+        <Header title="Zuo Art Studio">Gatsby Tutorial Starter</Header>
         <Container center={props}>
 
         <Img fixed={props.data.allFile.edges[0].node.childImageSharp.fixed} />

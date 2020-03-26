@@ -40,8 +40,8 @@ const Index = ( props ) => {
 
   return (
     <Layout>
-      <Helmet title={'Zuo Art Studios'} />
-      <Header title="Zuo Art Studios">[test this out]</Header>
+      <Helmet title={'Zuo Art Studio'} />
+      <Header title="Zuo Art Studio">[test this out]</Header>
 
       <h1>{ username }</h1>
       <h2>{ description }</h2>
