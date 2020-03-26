@@ -9,9 +9,17 @@ import Img from 'gatsby-image';
 
 
 
-const About = (props) => {
+const Student = (props) => {
 
+  const arr = [];
 
+  for (let i = 0; i < props.data.allFile.edges.length; i++) {
+    arr.push(i);
+  }
+
+  let images = arr.map(num => {
+           return <Img fixed={props.data.allFile.edges[num].node.childImageSharp.fixed} />
+        });
 
   return (
       <Layout>
@@ -19,7 +27,7 @@ const About = (props) => {
         <Header title="Student Artwork"></Header>
         <Container center={props}>
 
-        <Img fixed={props.data.allFile.edges[0].node.childImageSharp.fixed} />
+        { images }}
 
 
         </Container>
@@ -28,9 +36,9 @@ const About = (props) => {
 
 };
 
-export default About;
+export default Student;
 
-About.propTypes = {
+Student.propTypes = {
   center: PropTypes.object,
 };
 

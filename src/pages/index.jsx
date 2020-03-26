@@ -29,8 +29,7 @@ const PostWrapper = styled.div`
 
 
 const Index = ( props ) => {
-  const username = props.data.allWordpressWpMe.edges[0].node.name;
-  const description = props.data.allWordpressWpMe.edges[0].node.description;
+  
 
 
 
@@ -43,8 +42,7 @@ const Index = ( props ) => {
       <Helmet title={'Zuo Art Studio'} />
       <Header title="Zuo Art Studio"></Header>
 
-      <h1>{ username }</h1>
-      <h2>{ description }</h2>
+
 
 
 
@@ -99,23 +97,3 @@ const Index = ( props ) => {
 };
 
 export default Index;
-
-
-
-
-
-
-
-
-export const query = graphql`
-  query {
-    allWordpressWpMe {
-      edges {
-        node {
-          name
-          description
-        }
-      }
-    }
-}
-`;
