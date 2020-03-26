@@ -60,7 +60,7 @@ const Layout = ({ children }) => (
       <SEO />
       <NavBar />
       {children}
-      <Footer />
+      {/*<Footer />*/}
     </Fragment>
   </ThemeProvider>
 );

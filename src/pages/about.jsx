@@ -5,17 +5,15 @@ import { Header } from 'components';
 import { Layout, Container } from 'layouts';
 
 const About = (props) => {
+  const content = props.data.wordpressPost.content;
 
-  const username = props.data.allWordpressWpMe.edges[0].node.name;
-  const description = props.data.allWordpressWpMe.edges[0].node.description;
   return (
       <Layout>
         <Helmet title={'Zuo Art Studio'} />
         <Header title="About Me"></Header>
         <Container center={props}>
 
-            <h1>{ username }</h1>
-            <h2>{ description }</h2>
+            <div style={{textAlign: 'left', fontSize: "3em"}}dangerouslySetInnerHTML={{__html: content}}></div>
 
         </Container>
       </Layout>
@@ -32,13 +30,9 @@ About.propTypes = {
 
 export const query = graphql`
   query {
-    allWordpressWpMe {
-      edges {
-        node {
-          name
-          description
-        }
-      }
-    }
+    wordpressPost(title: {eq: "About Me"}) {
+      id
+      content
+  }
 }
 `;

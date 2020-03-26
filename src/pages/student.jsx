@@ -27,7 +27,7 @@ const Student = (props) => {
         <Header title="Student Artwork"></Header>
         <Container center={props}>
 
-        { images }}
+        { images }
 
 
         </Container>

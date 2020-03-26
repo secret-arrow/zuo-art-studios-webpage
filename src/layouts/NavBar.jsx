@@ -17,7 +17,7 @@ const Nav = styled.nav`
   font-family: ${props => props.theme.fontFamily.body};
   font-weight: 500;
   font-size: 1.1rem;
-  padding-right: 2em;
+  padding-right: 1.5em;
   align-items: center;
   a {
     color: ${props => props.theme.colors.white.base};
@@ -32,12 +32,12 @@ const Nav = styled.nav`
 const NavBar = () => (
   <Headroom calcHeightOnResize disableInlineStyles>
     <StyledLink to="/">
-      <img src={logo} alt="Gatsby Logo" />
+      <img src={logo} alt="Zuo Art Studio logo" />
     </StyledLink>
     <Nav>
       {/* <Link to="/">Home</Link>
       <Link to="/blog">Blog</Link> */}
-      <Link to="/about">About Me</Link>
+      <Link to="/about"><h4 style={{fontFamily: "Open Sans"}}>About Me</h4></Link>
     </Nav>
   </Headroom>
 );
