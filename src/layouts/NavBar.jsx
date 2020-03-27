@@ -9,6 +9,10 @@ const StyledLink = styled(Link)`
   display: flex;
   font-weight: 700;
   align-items: center;
+  img {
+    width: 9em;
+    height: auto;
+  }
 `;
 
 const Nav = styled.nav`
@@ -37,7 +41,7 @@ const NavBar = () => (
     <Nav>
       {/* <Link to="/">Home</Link>
       <Link to="/blog">Blog</Link> */}
-      <Link to="/about"><h4 style={{fontFamily: "Open Sans"}}>About Me</h4></Link>
+      <Link to="/about"><h3 style={{fontFamily: "Open Sans"}}>About Me</h3></Link>
     </Nav>
   </Headroom>
 );
