@@ -15,7 +15,7 @@ const PostWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 4rem 4rem 1rem 4rem;
+  margin: 2rem 2rem 1rem 2rem;
   @media (max-width: 1000px) {
     margin: 4rem 2rem 1rem 2rem;
   }
